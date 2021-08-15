@@ -10,17 +10,26 @@ namespace GameSellProject.Concrete
     {
         public void Add(Campaign campaign)
         {
-            Console.WriteLine(campaign.CampaignName + " İsimli kampanya uygulandı");
+            if (campaign != null)
+            {
+                Console.WriteLine(campaign.CampaignName + " İsimli kampanya uygulandı");
+            }
         }
 
         public void Delete(Campaign campaign)
         {
-            Console.WriteLine(campaign.CampaignName + " İsimli kampanya silindi");
+            if (campaign != null)
+            {
+                Console.WriteLine(campaign.CampaignName + " İsimli kampanya silindi");
+            }
         }
 
         public void Update(Campaign campaign)
         {
-            Console.WriteLine(campaign.CampaignName + " İsimli kampanya güncellendi");
+            if (campaign != null)
+            {
+                Console.WriteLine(campaign.CampaignName + " İsimli kampanya güncellendi");
+            }
         }
     }
 }

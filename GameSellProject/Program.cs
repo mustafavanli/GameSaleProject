@@ -38,10 +38,11 @@ namespace GameSellProject
             OrderGame.Add(game2);
             // ------------- OYUN BİLGİSİ ----------------
             // ------------- KAMPANYA BİLGİSİ ----------------
+            // eğer kampanya YOK İSE null olarak girilmelidir , Örnek: Campaign campaign = null;
             Campaign campaign = new Campaign() {
-                Id = 1,
-                CampaignName = "%50 INDIRIM SOLENI",
-                CampaignDiscount = 50
+                Id = 1, // Kampanya ID si
+                CampaignName = "%50 INDIRIM SOLENI", // Kampanya ADI
+                CampaignDiscount = 50  // Kampanya indirimi % biriminden
             };
             // ------------- KAMPANYA BİLGİSİ ----------------
 

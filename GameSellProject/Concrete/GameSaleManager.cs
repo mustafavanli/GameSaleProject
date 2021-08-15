@@ -15,11 +15,18 @@ namespace GameSellProject.Concrete
             {
                 TotalPrice += item.GamePrice;
             }
-            TotalPrice = (TotalPrice * campaign.CampaignDiscount) / 100;  // Yüzdesel indirim.
-                                                                          
-            Console.WriteLine(gamer.FirstName + " isimli oyuncuya bugüne özel " + campaign.CampaignName + 
-                "\nisimli kampanyadan dolayı % " + campaign.CampaignDiscount + " kadar indirim kazandınız ve yeni harcama tutarı: "
-                + TotalPrice);
+            if (campaign != null)
+            {
+                TotalPrice = (TotalPrice * campaign.CampaignDiscount) / 100;  // Yüzdesel indirim.
+
+                Console.WriteLine(gamer.FirstName + " isimli oyuncuya bugüne özel " + campaign.CampaignName +
+                    "\nisimli kampanyadan dolayı % " + campaign.CampaignDiscount + " kadar indirim kazandınız ve yeni harcama tutarı: "
+                    + TotalPrice);
+            }
+            else
+            {
+                Console.WriteLine(gamer.FirstName + " isimli oyuncu toplam satış fiyatı : "+TotalPrice);
+            }
         }
     }
 }
